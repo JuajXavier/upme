@@ -1,0 +1,14 @@
+Next.js (um framework dentro do react)
+.
+Substitui o create-react-app
+SPA, SSR e SSG
+SPA: a página não muda, fica as coisas repetitiveis e muda apenas o que precisa pra pagina (conteúdo)
+SSR: server side rendering
+SSG: static site generation 
+SEO: Search Engine Optimization
+
+create-react-app (SPA), Gatsby (SPA e SSG), Next.js (SPA, SSR e SSG)
+
+migrar create-react-app para next.js:
+
+
