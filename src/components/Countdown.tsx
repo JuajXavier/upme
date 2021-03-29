@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ChallengesContext } from "../contexts/ChallengesContext";
 import styles from "../styles/components/Countdown.module.css";
 
 let countdownTimeout: NodeJS.Timeout; // variável global do js
 
 export function Countdown() {
+  const { startNewChallenge } = useContext(ChallengesContext);
+
   const [time, setTime] = useState(0.05 * 60); // 25 * 60 pra passar 25 minutos pra segundos.
   const [isActive, setIsActive] = useState(false); // estado que armazena a atividade ou não do timer.
   const [finished, setFinished] = useState(false);
@@ -33,6 +36,7 @@ export function Countdown() {
     } else if (isActive && time === 0) {
       setFinished(true);
       setIsActive(false);
+      startNewChallenge();
     }
   }, [isActive, time]); // disparado quando o active for atualizado pelo valor armazenado em setActive e time em setTime.
 
