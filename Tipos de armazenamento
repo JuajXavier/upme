@@ -1,0 +1,7 @@
+Local storage = armazena chave e valor, sempre em texto;
+Session store = igual o local store, porem ele fica armazenado apenas durante a sessão de navegação,
+se fechar o browser, perde os dados armazenados;
+IndexDB = gg
+WebSQL = tipo um sqlite
+Cookies = parecido com local storage, mas os dados podem ser acessados por todas as camadas da aplicação,
+seja front, back, e intermediarios.
